@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Welcome to iBlog {% endblock title %}
+{% block body %}
+<div class="container my-3">
+<div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+          {{post.title}}
+      </h3>
+
+      <div class="blog-post">
+          <p class="blog-post-meta">{{post.timeStamp}} by <b>{{post.author}}</b></p>
+      </div><!-- /.blog-post -->
+        <p>
+            {{post.content| safe}}
+        </p>
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">About</h4>
+        <p class="mb-0">iBlog is a <em>blogging website</em>. You can read other people's blog over here and also write your own. </p>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+
+  </div>
+
+
+    </div>
+
+
+
+{% endblock body %}
